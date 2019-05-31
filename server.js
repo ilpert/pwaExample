@@ -184,10 +184,17 @@ function startServer() {
   app.use(express.static('public'));
 
   // Start the server
-  return app.listen('5555', () => {
+  return app.listen(1337, "127.0.0.1", () => {
     // eslint-disable-next-line no-console
-    console.log('Local DevServer Started on port 5555...');
+    console.log('Local DevServer Started on port 8080...');
   });
+
+  // require('http').createServer(function (req, res) {
+  //   res.writeHead(200, { 'Content-Type': 'text/plain' });
+  //   res.end('Hello World\n');
+  // }).listen(1337, "127.0.0.1");
+
+
 }
 
 startServer();
